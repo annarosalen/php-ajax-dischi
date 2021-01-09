@@ -1,9 +1,3 @@
-// function getData(){
-
-//    axios
-//       .get('data.php')
-//       .then(res => console.log(res.data));
-// }
 
 function init(){
    var app= new Vue({
