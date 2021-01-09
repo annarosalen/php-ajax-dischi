@@ -1,5 +1,6 @@
 <?php
 
+    header ('Content-Type: application/json');
     $database = [
         [
             'title' => 'New Jersey',
@@ -39,4 +40,5 @@
         ]
     ];
 
+    echo json_encode($database);
 ?>   
