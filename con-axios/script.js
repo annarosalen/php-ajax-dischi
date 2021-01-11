@@ -5,13 +5,33 @@ function init(){
       data: {
          database: []
       },
+
+      methods: {
+
+         update: function (author){
+            axios
+               .get('data.php',{
+
+                  params: {
+
+                     'author': author
+                  }
+
+               })
+               .then(res =>{
+                  this.database = res.data;
+               });
+                     
+         },
+
+         clear: function(){
+            this.update('');
+         }
+
+      },
+
       mounted: function(){
-         axios
-            .get('data.php')
-            .then((risposta) => {
-               this.database = risposta.data;
-               console.log(risposta.data);
-            });
+         this.clear();
       }
    });
 }

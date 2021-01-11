@@ -40,5 +40,28 @@
         ]
     ];
 
-    echo json_encode($database);
+    $author = strtolower($_GET['author']);
+
+    //se nessun author corrisponde mi stampi tutti gli album
+
+    if(!$author){
+
+        echo json_encode($database);
+
+    }else {
+
+        $res=[];
+
+        for($x=0; $x<count($database); $x++){
+
+            $disco = $database[$x];
+
+            if(strtolower($disco['author']) == $author){
+                $res[]= $disco;
+            }
+
+        }
+        echo json_encode($res);
+    }
+    
 ?>   
