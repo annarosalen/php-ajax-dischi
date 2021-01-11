@@ -32,10 +32,10 @@
   }
   
   button{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
-  
+
   /* regole albums */
   .contenitore{
     width: calc(100% / 3);

@@ -16,6 +16,8 @@
 
     <div id="app">
 
+      <button @click="clear">CLEAR</button>
+      
       <button @click="update('Bon Jovi')">Bon Jovi</button>
       <button @click="update('Queen')">Queen</button>
       <button @click="update('Sting')">Sting</button>
@@ -35,7 +37,7 @@
         </div>
 
       </div>
-      
+
     </div>
 
 
